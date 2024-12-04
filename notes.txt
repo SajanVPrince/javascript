@@ -1,0 +1,67 @@
+javascript is used to Built interactive and dynamic websites
+
+
+Features
+
+1. Dynamically Typed
+2. Object oriented
+3. Highlevel programming language
+4. Portable
+5. Server side scripting (Node.js)
+6. Client Side Scripting 
+
+Uses
+
+
+
+Key words used in javascript
+
+var
+let
+const
+
+2015 es6 introduced let const
+
+
+data types
+
+Numeric (integer,Float)
+boolean 
+object (object,array)
+string 
+Undefined
+
+
+operators
+
+Arithmetic
+
++
+-
+/
+*
+**
+++
+--
+
+assignment
+
+=
++=
+-=
+/=
+*=
+**=
+
+comparison 
+
+===
+<=
+>=
+<
+>
+
+logical
+
+&& (AND)
+|| (OR)
