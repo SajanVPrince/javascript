@@ -23,11 +23,21 @@
 
 // console.log(10==10 && 10==100);
 // console.log(10==100 || 10==100);
-function fun1(){
+// function fun1(){
     // let a=document.getElementById("demo").value
     // console.log(a);
-    let a=parseInt(document.getElementById("demo").value)
-    console.log(typeof a);
-    console.log('Welcome');
+//     let a=parseInt(document.getElementById("demo").value)
+//     console.log(typeof a);
+//     console.log('Welcome');
+// }
+
+// let a=10
+// let b=10
+// if(a==b){
+//     console.log("equal");
+// }
+// else{
+//     console.log('not equal');
     
-}
+// }
+
