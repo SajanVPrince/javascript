@@ -9,34 +9,73 @@
 </head>
 <body>
     <div class="container">
+        <h6>Conditional</h6>
         <div class="row mt-5">
             <div class="col-lg-3">
-                <h4>Check Your salary</h4>
+                <h4>#1 Check Your salary</h4>
                 <input type="number" name="" id="sal" placeholder="enter your salary amount"><br><br>
                 <input type="number" name="" id="exp" placeholder="how long you are working"><br><br>
                 <button class="btn btn-primary" onclick="bonus()">Check</button>
-                <br><br><h5>This month salary</h5>
-                <h3 id="tot"></h3>
+                <br><br>
+                <h5 id="tot"></h5>
             </div>  
             <div class="col-lg-3">
-                <h4> Last Digit Divisible By 3</h4>
+                <h4>#2 Last Digit Divisible By 3</h4>
                 <input type="number" name="" id="num" placeholder="enter the number to check"> <br><br>
                 <button class="btn btn-primary" onclick="div3()">Check</button>
                 <br><br><h5 id="com"></h5>
             </div>
             <div class="col-lg-3">
-                <h4>Electricity Bill</h4>
+                <h4>#3 Electricity Bill</h4>
                 <input type="number" name="" id="unit" placeholder="enter the unit used"> <br><br>
                 <button class="btn btn-primary" onclick="elebill()">Check</button>
-                <br><br><h5>Your bill Amount is </h5>
-                <h3 id="div"></h3>
+                <br><br>
+                <h5 id="div"></h5>
             </div>
             <div class="col-lg-3">
-                <h4>Display Monuments</h4>
+                <h4>#4 Display Monuments</h4>
                 <input type="text" name="" id="city" placeholder="enter any city"> <br><br>
                 <button class="btn btn-primary" onclick="city()">Check</button>
                 <br><br>
-                <h3 id="dis"></h3>
+                <h5 id="dis"></h5>
+            </div>
+            <div class="col-lg-3">
+                <h4>#5 Day</h4>
+                <input type="number" name="" id="week" placeholder="enter any number from 1 to 7"> <br><br>
+                <button class="btn btn-primary" onclick="week()">Check</button>
+                <br><br>
+                <h5 id="dis1"></h5  >
+            </div>
+            <div class="col-lg-3">
+                <h4>#6 Bill of product</h4>
+                <input type="number" name="" id="bill1" placeholder="enter any number from 1 to 7"> <br><br>
+                <button class="btn btn-primary" onclick="prdbill()">Check</button>
+                <br><br>
+                <h6 id="dis2"></h6>
+                <h5 id="dis3"></h5>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h5>Looping</h5>
+        <div class="row">
+            <div class="col-lg-3">
+                <h4>#1 odd and even</h4>
+                <input type="number" name="" id="fnum" placeholder="enter starting num"><br><br>
+                <input type="number" name="" id="lnum" placeholder="enter last num"><br><br>
+                <button class="btn btn-primary" onclick="odd()">Odd</button>
+                <button class="btn btn-primary" onclick="even()">even</button>
+            </div>
+            <div class="col-lg-3">
+                <h4>#2 Calculator</h4>
+                <input type="number" name="" id="fnum1" placeholder="enter a number to multiply"><br><br>
+                <input type="number" name="" id="lnum1" placeholder="ending"><br><br>
+                <button class="btn btn-primary" onclick="mul()">Show</button>
+            </div>
+            <div class="col-lg-3">
+                <h4>#2 Reverse</h4>
+                <input type="text" name="" id="rev" placeholder="enter to reverse"><br><br>
+                <button class="btn btn-primary" onclick="rev()">Show</button>
             </div>
         </div>
     </div>

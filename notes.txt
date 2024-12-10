@@ -65,3 +65,47 @@ logical
 
 && (AND)
 || (OR)
+
+
+looping statements
+
+for
+----
+
+for(let i=0;i<=10,i++){
+    console.log(i)
+}
+
+while
+-----
+
+let i=0
+while(i<=10){
+    console.log(i)
+    i++
+}
+
+do while
+--------
+
+let i=0
+do{
+    console.log(i)
+    i++
+}
+while(i<=10)
+
+for in
+------
+
+for in can be used to access index value
+
+for (i in a)
+
+whether a can be an arrey or object(dictionary)
+in object case it shows the key names
+
+for of
+------
+
+for of can be used in arrey only to acces the value inside an array
