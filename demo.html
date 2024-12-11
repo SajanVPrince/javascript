@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #editform{
+            display:none;
+        }
+    </style>
 </head>
 <body>
-    <input type="number" id="demo">
-    <button onclick="fun1()">Click</button>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <form action="" id="addform">
+        <input type="text" name="" id="id" placeholder="id">
+        <input type="text" name="" id="name" placeholder="name">
+        <input type="number" name="" id="age" placeholder="age">
+        <input type="submit" value="Add">
+    </form>
+    <form action="" id="edit_form">
+        <input type="text" name="" id="eid" placeholder="id">
+        <input type="text" name="" id="ename" placeholder="name">
+        <input type="number" name="" id="eage" placeholder="age">
+        <input type="submit" value="Update">
+    </form>
     <script src="demo.js">
     </script>
 </body>

@@ -91,17 +91,69 @@
 // l[1]=100
 // console.log(l);
 
-function sample(){
-    console.log('sample1');
-}
-sample()
+// function sample(){
+//     console.log('sample1');
+// }
+// sample()
 
-let sample1=function(){
-    console.log('sample1');
-}
-sample1()
+// let sample1=function(){
+//     console.log('sample1');
+// }
+// sample1()
 
-let sample2=()=>{
-    console.log('sample2');
+// let sample2=()=>{
+//     console.log('sample2');
+// }
+// sample2()
+
+let a=[{id:'1',name:'Akhil',age:21},
+    {id:'2',name:'jith',age:21},
+    {id:'3',name:'roshan',age:21},
+    {id:'4',name:'prince',age:21},
+    {id:'5',name:'sajan',age:21},
+]
+function disp(){
+    let tbody=document.querySelector("tbody")
+    tbody.innerHTML=''
+    a.forEach((i)=>{
+        let tr=document.createElement("tr")
+        let id_td=document.createElement('td')
+        id_td.innerHTML=i.id
+        tr.appendChild(id_td)
+        let name=document.createElement('td')
+        name.innerHTML=i.name
+        tr.appendChild(name)
+        let age=document.createElement('td')
+        age.innerHTML=i.age
+        tr.appendChild(age)
+        let edit_td=document.createElement('td')
+        let edit_btn=document.createElement('button')
+        edit_btn.innerHTML='edit'
+        edit_btn.onclick=function(){
+            edit_form(i.id)
+        }
+        edit_td.appendChild(edit_btn)
+        tbody.appendChild(tr)
+    })}
+
+document.getElementById("addform").addEventListener('submit',function(event){
+event.preventDefault()
+let id=document.getElementById('id').value
+let name=document.getElementById('name').value
+let age=document.getElementById('age').value
+a.push({id:id,name:name,age:age})
+disp()
+})
+function edit_form(id){
+    document.getElementById('addform').style.display='none'
+    document.getElementById('edit_form').style.display='block'
+    let editdata=a.find(user=>user.id=id)
+    document.getElementById('eid').value=editdata.id
+    document.getElementById('ename').value=editdata.name
+    document.getElementById('eage').value=editdata.age
+    a.push({id:eid,name:ename,age:eage})()
+    disp
+
+
 }
-sample2()
+disp()
