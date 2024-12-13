@@ -106,7 +106,7 @@
 // }
 // sample2()
 
-let a=[{id:'1',name:'Akhil',age:21},
+let data=[{id:'1',name:'Akhil',age:21},
     {id:'2',name:'jith',age:21},
     {id:'3',name:'roshan',age:21},
     {id:'4',name:'prince',age:21},
@@ -115,7 +115,7 @@ let a=[{id:'1',name:'Akhil',age:21},
 function disp(){
     let tbody=document.querySelector("tbody")
     tbody.innerHTML=''
-    a.forEach((i)=>{
+    data.forEach((i)=>{
         let tr=document.createElement("tr")
         let id_td=document.createElement('td')
         id_td.innerHTML=i.id
@@ -133,27 +133,60 @@ function disp(){
             edit_form(i.id)
         }
         edit_td.appendChild(edit_btn)
+        tr.appendChild(edit_td)
+        let dlt_td=document.createElement('td')
+        let dlt_btn=document.createElement('button')
+        dlt_btn.innerHTML='delete'
+        dlt_btn.onclick=function(){
+            dltdata(i.id)
+        }
+        dlt_td.appendChild(dlt_btn)
+        tr.appendChild(dlt_td)
         tbody.appendChild(tr)
     })}
+
+function dltdata(id){
+    data=data.filter((user)=>{
+        if(user.id!=id){
+            return user
+        }
+    })
+    disp()
+}
 
 document.getElementById("addform").addEventListener('submit',function(event){
 event.preventDefault()
 let id=document.getElementById('id').value
 let name=document.getElementById('name').value
 let age=document.getElementById('age').value
-a.push({id:id,name:name,age:age})
+data.push({id:id,name:name,age:age})
 disp()
 })
+
+let edit_var
 function edit_form(id){
     document.getElementById('addform').style.display='none'
-    document.getElementById('edit_form').style.display='block'
-    let editdata=a.find(user=>user.id=id)
+    document.getElementById('editform').style.display='block'
+    let editdata=data.find(user=>user.id==id)
     document.getElementById('eid').value=editdata.id
     document.getElementById('ename').value=editdata.name
     document.getElementById('eage').value=editdata.age
-    a.push({id:eid,name:ename,age:eage})()
-    disp
-
-
+    edit_var=id
 }
+document.getElementById("editform").addEventListener('submit',function(event){
+    event.preventDefault()
+    let id = document.getElementById('eid').value
+    let name=document.getElementById('ename').value
+    let age=document.getElementById('eage').value
+
+    data=data.map((user)=>{
+        if(user.id==edit_var){
+            return{...user,id:id,name:name,age:age}
+        }
+        return user
+    })
+    document.getElementById('addform').style.display='block'
+    document.getElementById('editform').style.display='none'
+    disp()
+})
 disp()
