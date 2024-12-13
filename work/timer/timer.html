@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="sec"></h1>
+    <script>
+        let m=1
+        let s=59
+        let data=setInterval(()=>{
+            document.getElementById('sec').innerHTML=m+':'+s
+            if(s===0){
+                if(m===0){
+                    clearInterval(data);
+                    document.getElementById('sec').innerHTML='Timeout'
+                }
+                else{
+                    m--;
+                    s=59
+                }
+            }
+            else{
+                s--;
+            }
+        },1000)
+    </script>
+</body>
+</html>
