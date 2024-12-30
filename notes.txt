@@ -109,3 +109,9 @@ for of
 ------
 
 for of can be used in arrey only to acces the value inside an array
+
+
+
+npm create vite@latest app_name
+select react 
+and then javascript
